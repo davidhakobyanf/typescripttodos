@@ -1,0 +1,17 @@
+.homeContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home {
+    width: 250px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 10px;
+}
+.todoItem {
+    display: flex;
+}
