@@ -5,11 +5,12 @@ interface ButtonProps {
     color?: string;
     marginLeft?: string;
     type?: 'reset' | 'button' | 'submit';
+    onClick?: () => void;
 }
 
-const Button: FC<ButtonProps> = ({ title, marginLeft, color = 'white', type = 'button' }) => {
+const Button: FC<ButtonProps> = ({ title, marginLeft, color = 'white', type = 'button' ,onClick}) => {
     return (
-        <button type={type} className={styles.buttonContainer} style={{ backgroundColor: color, marginLeft }}>
+        <button type={type} className={styles.buttonContainer} style={{ backgroundColor: color, marginLeft }} onClick={onClick}>
             {title}
         </button>
     );
