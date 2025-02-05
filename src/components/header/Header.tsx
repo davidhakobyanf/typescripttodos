@@ -13,18 +13,17 @@ const Header = () => {
         e.preventDefault();
         const newTodo = { id: uid(), text };
         setTodos([...todos, newTodo]);
+        setText('');
     };
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { value } = e.target;
         setText(value);
     };
-    console.log(todos, 'todos');
-    console.log(text, 'todos');
     return (
         <div className={styles.header}>
             <h2>ToDoList</h2>
             <form onSubmit={handleSubmit} className={styles.form}>
-                <Input placeholder='Enter the text' onChange={handleChange} />
+                <Input placeholder='Enter the text' onChange={handleChange} value={text} />
                 <Button type='submit' title='Add' color='' />
             </form>
         </div>
